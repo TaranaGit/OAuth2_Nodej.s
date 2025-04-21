@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Auth</title>
+</head>
+<body>
+  <% if (user) { %>
+    <h1>Hello, <%= user.displayName %>!</h1>
+    <p>Email: <%= user.emails[0].value %></p>
+    <a href="/auth/logout">Logout</a>
+  <% }
+  
+  else { %>
+    <h1>Welcome, Guest!</h1>
+    <a href="/auth/google">Login with Google</a>
+  <% } %>
+</body>
+</html>
